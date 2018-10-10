@@ -5,7 +5,7 @@
 #include "stdafx.h"
 #include <string>
 using namespace std;
-typedef enum{LH, EH, RH} BalFactor;
+typedef enum{LH, EH, RH} BalFactor; 
 
 template <class ItemType>
 struct TreeNode
@@ -120,6 +120,7 @@ void PrintTree(TreeNode<ItemType>*& tree)
 {
 	if (tree != NULL)
 	{
+		//Balance factor: LH = 0, EH = 1, RH = 2
 		PrintTree(tree->left);
 		cout << "\n\t" << tree->info << ":";
 		if (tree->left)
